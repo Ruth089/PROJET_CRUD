@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <link rel="stylesheet" href="crud.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+         
+      <h1>MAPENDO  sarl</h1>
+    
+      <form name="formEmploye" action="">
+        <div class="ui inverted segment">
+          <div class="ui inverted form">
+
+            <div class="two fields">
+                <div class="field">
+                      <label for="Nom">Nom</label>
+                      <input placeholder="Votre Nom" id="Nom" type="text" name="Nom" class="input"> <br>
+                      <span class="erreur" id="nomManquant" ></span>
+                </div> 
+                <div class="field">
+                      <label for="Prenom">Prenom</label>
+                      <input placeholder="Votre Prenom" id="Prenom" type="text" name="Prenom" class="input"> <br>
+                      <span class="erreur" id="prenomManquant" ></span>
+                </div> 
+            </div>
+            <div class="two fields">  
+              <div class="field">
+                  <label for="mail">E-mail</label>
+                  <input placeholder="Votre E-mail" type="email" id="mail" name="E-mail" class="input"> <br>
+                  <span class="erreur" id="mailManquant" ></span>
+              </div> 
+              <div class="field">
+                <label for="Poste">Poste</label>
+                <input placeholder="Votre Poste" type="text" id="Poste" name="Poste" class="input"> <br>
+                <span class="erreur" id="Poste_manquant" ></span>
+              </div> 
+              <!-- <div class="field">
+                  <label for="Age">Age</label>
+                  <input placeholder="Votre Age" type="text" id="Age" name="Age" class="input">
+              </div> <br> -->
+            </div>
+            
+              
+
+              <div class="field">
+                  <label for="Phone_Number" >Phone_Number</label>
+                  <input placeholder="Your Phone Number" type="tel" id="Phone_Number" name="Phone_Number" required="required" maxlength="15" class="input"> <br>
+                  <span class="erreur" id="Phone_Number_maquant" ></span>
+              </div> 
+            
+              <div class="field">
+                  <label for="EtatCivil" >Etat_Civil</label>
+                  <select name="etatCivil" id="etatCivil" class="input"> 
+                    <option value="false">Célibataire</option>
+                    <option value="true">Marié</option>
+                  </select>
+                  <span id="etatCivilManquant"></span>
+              </div> <br>
+
+              <div class="field">
+                <label for="Nationalite">Nationalité</label>    
+                  <select name="pays" id="pays" class="input" >
+                    <optgroup label="Afrique"> 
+                      <option value="Cameroun">Cameroun</option>
+                      <option value="RDC">Répblique démocratique du congo</option>
+                      <option value="Maroc">Maroc</option>
+                    </optgroup>
+                    <optgroup label="Amérique"> 
+                      <option value="Brézil">Brézil</option>
+                      <option value="Portugal">Portugal</option>
+                      <option value="Mexique">Mexique</option>
+                    </optgroup>
+                    <optgroup label="Europe">
+                      <option value="France">France</option>
+                      <option value="Belgique">Belgique</option>
+                      <option value="Suisse">Suisse</option>
+                    </optgroup>
+                  </select>
+                  <span id="spanPays"></span>
+              </div> <br>
+             
+              
+              <div>
+                <button class="ui inverted grey button" id="valider">Ajouter </button>
+                <button class="ui inverted grey button"  id="modifier">Modifier</button>
+                
+              </div>
+
+          </div>
+        </div>
+      </form>
+<br>
+<div id="maDiv">
+
+</div>
+  <div >
+    <table class="ui inverted grey table">
+      <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>E-mail</th>
+           <!-- /* <th>Age</th>*/ -->
+            <th>Poste</th>
+            <th>Phone_Number</th>
+            <th>Etat_Civil</th>
+            <th>Nationalite</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+     
+  </div>
+
+  </div>   
+
+    <script src="crud.js"></script>
+</body>
+</html>
